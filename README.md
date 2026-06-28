@@ -1,22 +1,7 @@
 An unsupervised Natural Language Processing (NLP) architecture designed to parse, categorize, and evaluate candidate resumes against complex job descriptions. By mapping a high-density vocabulary space using a Skip-gram Word2Vec configuration and partitioning technical capabilities using K-Means Clustering, this engine computes localized segment similarities. This approach establishes a robust defensive filter against "keyword-stuffing" techniques that typically exploit primitive automation systems.
 
 
-[ Messy Raw Resumes ]
-          │
-          ▼
-   src/preprocess.py  ──► Regex Cleaning & Morphological Lemmatization
-          │
-          ▼
-   src/embeddings.py  ──► Skip-gram Word2Vec Neural Embedding (100-D Space)
-          │
-          ▼
-   src/clustering.py  ──► K-Means Mathematical Domain Partitioning (K=26)
-          │
-          ▼
-     src/scorer.py    ──► Localized Document Vector Extraction & Filtered Cosine Similarity
-          │
-          ▼
-[ Rank-Ordered Shortlist (0 - 10 Scale) ]
+[ Messy Raw Resumes ] ---> Regex Cleaning & Morphological Lemmatization ---> Skip-gram Word2Vec Neural Embedding (100-D Space) ---> K-Means Mathematical Domain Partitioning (K=26) ---> Localized Document Vector Extraction & Filtered Cosine Similarity ---> [ Rank-Ordered Shortlist (0 - 10 Scale) ]
 
 
 1. Skip-gram Word2Vec over TF-IDF

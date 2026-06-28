@@ -1,2 +1,8 @@
 venv/
-src/_init_.py/
+.venv/
+src/__init__.py/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+.idea/
